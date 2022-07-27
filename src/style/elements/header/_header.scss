@@ -1,0 +1,93 @@
+header {
+  width: 100%;
+  height: 66px;
+  @include flexCenter(space-between, center, row);
+  padding: 0px 5%;
+  z-index: 99;
+  position: fixed;
+  background-color: $light;
+
+  .logo {
+    width: 100px;
+  }
+
+  nav {
+    @include flexCenter(space-between, center, row);
+    gap: 20px;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-link {
+    font-weight: 400;
+    font-size: 16px;
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  .header-container-icons {
+    @include flexCenter(space-between, center, row);
+    gap: 12px;
+  }
+
+  .header-icon,
+  .close-icon {
+    font-size: 24px;
+    color: $primary;
+    cursor: pointer;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  .close-icon {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: -1.5rem;
+    right: 1.5rem;
+    transition: 0.2s;
+  }
+
+  @media (max-width: 700px) {
+    nav {
+      display: none;
+    }
+
+    .menu-icon {
+      display: inherit;
+    }
+
+    nav.show {
+      @include flexCenter(center, center, column);
+      width: 100%;
+      height: 100vh;
+      background: $gray;
+      z-index: 99;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 50px;
+      justify-content: center;
+      gap: 40px;
+
+      .nav-link {
+        font-size: 32px;
+      }
+    }
+    .show {
+      visibility: visible;
+      font-size: 26px;
+      opacity: 1;
+      z-index: 99;
+      top: 1.5rem;
+    }
+  }
+}

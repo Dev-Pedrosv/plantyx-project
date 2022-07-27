@@ -1,0 +1,19 @@
+@import "./elements/theme";
+@import "./elements/functions";
+@import "./elements/header/header";
+@import "./elements/section-plants/plants";
+@import "./elements/section-for-house/for-house";
+@import "./elements/section-plants-care/plants-care";
+@import "./elements/section-products/products";
+@import "./elements/section-social-media/social-media";
+@import "./elements/footer/footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+}

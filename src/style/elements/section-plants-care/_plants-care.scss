@@ -1,0 +1,121 @@
+#plants-care {
+  @include defaultValueSection();
+  padding: 66px 5%;
+  background: $gray;
+  margin-bottom: 25%;
+  @include flexCenter(space-between, center, row);
+
+  .container-plants-care-left {
+    width: 300px;
+    flex-direction: column;
+    height: 450px;
+    gap: 20px;
+    @include flexCenter(center, self-start, column);
+
+    .plants-care-text {
+      font-size: 18px;
+      color: $primary;
+    }
+
+    .plants-care-title {
+      font-size: 42px;
+      color: $secondary;
+    }
+  }
+
+  .container-plants-care-right {
+    width: 60%;
+    margin-top: 25%;
+    @include flexCenter(space-between, center, row);
+
+    .container-img-right {
+      @include flexCenter(center, self-start, column);
+      gap: 20px;
+    }
+
+    .container-img-horizontal {
+      @include flexCenter(center, center, column);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .img-plant-care-vertical {
+      width: 100%;
+    }
+
+    .container-img {
+      @include flexCenter(center, center, column);
+      width: 250px;
+      gap: 20px;
+      padding-bottom: 12px;
+      text-align: center;
+      margin-right: 35px;
+      background: $gray;
+    }
+
+    .plants-care-title-banner {
+      font-size: 22px;
+      font-weight: bold;
+      color: $primary;
+    }
+
+    .plants-care-description {
+      font-size: 16px;
+      color: $secondaryVariant;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  #plants-care {
+    flex-direction: column;
+    height: auto;
+
+    .container-plants-care-left {
+      align-items: center;
+      height: auto;
+      gap: 8px;
+      text-align: center;
+
+      .plants-care-text {
+        font-size: 16px;
+      }
+
+      .plants-care-title {
+        font-size: 36px;
+      }
+    }
+
+    .container-plants-care-right {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+      gap: 10px;
+
+      .container-img {
+        margin: 0px;
+      }
+
+      .container-img-right {
+        align-items: center;
+        gap: 10px;
+      }
+
+      .img-plant-care-horizontal {
+        height: 180px;
+      }
+
+      .img-plant-care-vertical {
+        height: 220px;
+      }
+
+      .plants-care-title-banner {
+        font-size: 18px;
+      }
+
+      .plants-care-description {
+        font-size: 14px;
+      }
+    }
+  }
+}

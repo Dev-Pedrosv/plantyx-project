@@ -1,0 +1,40 @@
+#social-media {
+  @include defaultValueSection();
+  padding-top: 10%;
+  @include flexCenter(center, center, column);
+
+  .insta-info {
+    font-size: 26px;
+    font-weight: bold;
+    color: $primary;
+    margin-bottom: 10px;
+  }
+
+  .container-social-media {
+    @include flexCenter(center, center, row);
+    gap: 20px;
+
+    :nth-child(2) {
+      margin-top: 120px;
+    }
+  }
+  .img-insta {
+    width: 350px;
+  }
+}
+
+@media (max-width: 700px) {
+  #social-media {
+    align-items: center;
+    padding: 50px;
+    height: auto;
+
+    .container-social-media {
+      gap: 10px;
+    }
+
+    .img-insta {
+      width: 120px;
+    }
+  }
+}
